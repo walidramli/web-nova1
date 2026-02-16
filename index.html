@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebNova · Plateforme Équipe</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0A0C14;
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        /* ========== PAGE ACCUEIL LUXE ========== */
+        .landing-page {
+            display: flex;
+            min-height: 100vh;
+            background: radial-gradient(circle at 30% 40%, #1A1A2A, #000000);
+            position: relative;
+        }
+
+        .landing-left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .landing-left::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            left: -20%;
+            width: 80%;
+            height: 80%;
+            background: radial-gradient(circle, #FFD70020, transparent 70%);
+            border-radius: 50%;
+            animation: floatGlow 8s infinite alternate;
+        }
+
+        @keyframes floatGlow {
+            0% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+            100% { transform: translate(30px, 30px) scale(1.2); opacity: 0.6; }
+        }
+
+        .landing-logo {
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .landing-logo .web {
+            font-size: 3.5rem;
+            font-weight: 300;
+            letter-spacing: 1.2rem;
+            color: #fff;
+            text-shadow: 0 0 30px #FFD70080;
+            display: block;
+        }
+
+        .landing-logo .nova {
+            font-size: 8rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #FFD700, #FFA500, #FF8C00);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            line-height: 0.8;
+            filter: drop-shadow(0 0 50px #FFD700) drop-shadow(0 0 100px #FF8C00);
+            animation: novaBreath 3s infinite alternate;
+        }
+
+        @keyframes novaBreath {
+            0% { filter: drop-shadow(0 0 40px #FFD700); }
+            100% { filter: drop-shadow(0 0 80px #FFD700) drop-shadow(0 0 120px #FF8C00); }
+        }
+
+        .landing-tagline {
+            font-size: 1.8rem;
+            color: #ccc;
+            margin: 2rem 0;
+            position: relative;
+            z-index: 2;
+            font-weight: 300;
+        }
+
+        .landing-tagline span {
+            color: #FFD700;
+            font-weight: 600;
+        }
+
+        .landing-features {
+            display: flex;
+            gap: 3rem;
+            margin: 3rem 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .feature i {
+            font-size: 2.2rem;
+            color: #FFD700;
+            filter: drop-shadow(0 0 20px #FFD700);
+        }
+
+        .feature span {
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        /* Right side Login */
+        .landing-right {
+            width: 500px;
+            background: rgba(15, 15, 18, 0.8);
+            backdrop-filter: blur(20px);
+            border-left: 2px solid #FFD70040;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 3.5rem;
+            position: relative;
+            box-shadow: -20px 0 60px #000000;
+        }
+
+        .login-card {
+            width: 100%;
+        }
+
+        .login-card h2 {
+            color: #FFD700;
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .share-link {
+            margin: 2rem 0 3rem;
+            text-align: center;
+            padding: 1.8rem;
+            background: rgba(255, 215, 0, 0.05);
+            border: 2px dashed #FFD70060;
+            border-radius: 40px;
+        }
+
+        .share-link p {
+            color: #FFD700;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .share-link .link-box {
+            display: flex;
+            gap: 0.8rem;
+        }
+
+        .share-link input {
+            flex: 1;
+            padding: 1.2rem;
+            background: #0A0C14;
+            border: 2px solid #FFD70040;
+            border-radius: 40px;
+            color: #FFD700;
+            text-align: center;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .share-link button {
+            background: #FFD700;
+            border: none;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            color: #0A0C14;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 1.2rem;
+        }
+
+        .share-link button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px #FFD700;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 1.8rem;
+        }
+
+        .input-group i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #FFD700;
+            font-size: 1.3rem;
+        }
+
+        .input-group input {
+            width: 100%;
+            background: rgba(26, 28, 36, 0.7);
+            border: 2px solid #FFD70030;
+            padding: 1.4rem 1.4rem 1.4rem 3.5rem;
+            border-radius: 60px;
+            color: white;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #FFD700;
+            box-shadow: 0 0 40px #FFD70040;
+        }
+
+        .login-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #FFD700, #B8860B);
+            color: #0A0C14;
+            font-weight: 700;
+            padding: 1.4rem;
+            border: none;
+            border-radius: 60px;
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 1.5rem;
+        }
+
+        .login-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 50px #FFD700;
+        }
+
+        /* ========== APPLICATION ========== */
+        .app {
+            display: none;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .app.active {
+            display: flex;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 320px;
+            background: rgba(10, 12, 20, 0.95);
+            backdrop-filter: blur(20px);
+            border-right: 2px solid #FFD70030;
+            display: flex;
+            flex-direction: column;
+            padding: 2.5rem 1.8rem;
+            overflow-y: auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 2.5rem;
+        }
+
+        .logo i {
+            color: #FFD700;
+            filter: drop-shadow(0 0 20px #FFD700);
+            font-size: 2.5rem;
+        }
+
+        .user-info {
+            background: rgba(255, 215, 0, 0.08);
+            border: 1px solid #FFD70030;
+            border-radius: 30px;
+            padding: 1.8rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+
+        .user-avatar {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #FFD700, #FF8C00);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0A0C14;
+            font-weight: 700;
+            font-size: 2.2rem;
+            box-shadow: 0 0 30px #FFD700;
+        }
+
+        .user-details h3 {
+            color: #FFD700;
+            font-size: 1.3rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .user-details p {
+            color: #aaa;
+            font-size: 0.95rem;
+        }
+
+        .role-badge {
+            display: inline-block;
+            background: #FFD70020;
+            color: #FFD700;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        .nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            flex: 1;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            padding: 1.2rem 1.5rem;
+            border-radius: 20px;
+            color: #aaa;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 1.1rem;
+        }
+
+        .nav-item i {
+            width: 28px;
+            font-size: 1.3rem;
+        }
+
+        .nav-item:hover {
+            background: #FFD70015;
+            color: #FFD700;
+            transform: translateX(5px);
+        }
+
+        .nav-item.active {
+            background: #FFD70020;
+            color: #FFD700;
+            border-left: 5px solid #FFD700;
+        }
+
+        /* Settings Panel Admin */
+        .settings-panel {
+            background: rgba(255, 215, 0, 0.05);
+            border: 1px solid #FFD70030;
+            border-radius: 25px;
+            padding: 1.8rem;
+            margin: 1.5rem 0;
+        }
+
+        .settings-panel h4 {
+            color: #FFD700;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .member-row {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            margin-bottom: 0.8rem;
+        }
+
+        .member-row span {
+            color: #FFD700;
+            font-weight: 600;
+            min-width: 30px;
+        }
+
+        .member-row input {
+            flex: 1;
+            background: #1A1C24;
+            border: 1px solid #FFD70030;
+            padding: 0.7rem;
+            border-radius: 12px;
+            color: white;
+        }
+
+        .member-row select {
+            background: #1A1C24;
+            border: 1px solid #FFD70030;
+            padding: 0.7rem;
+            border-radius: 12px;
+            color: #FFD700;
+            cursor: pointer;
+        }
+
+        .member-row button {
+            background: #FFD70020;
+            border: none;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            color: #FFD700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .member-row button:hover {
+            background: #FFD700;
+            color: #0A0C14;
+        }
+
+        .add-member {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .add-member input, .add-member select {
+            flex: 1;
+            background: #1A1C24;
+            border: 1px solid #FFD70030;
+            padding: 1rem;
+            border-radius: 15px;
+            color: white;
+            min-width: 120px;
+        }
+
+        .btn-gold-small {
+            background: #FFD700;
+            color: #0A0C14;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-gold-small:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px #FFD700;
+        }
+
+        .logout-btn {
+            background: transparent;
+            border: 2px solid #FFD700;
+            color: #FFD700;
+            padding: 1rem;
+            border-radius: 40px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 1rem;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .logout-btn:hover {
+            background: #FFD70020;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .dashboard-section {
+            flex: 1;
+            padding: 2rem;
+            overflow-y: auto;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .page-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #FFD700, #FFB347);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        /* Stats Cards */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: rgba(15, 15, 18, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid #FFD70030;
+            border-radius: 30px;
+            padding: 2.2rem;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: #FFD700;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px #00000080;
+        }
+
+        .card h3 {
+            color: #FFD700;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #FFD700;
+            line-height: 1;
+        }
+
+        /* Tasks Section */
+        .tasks-container {
+            background: rgba(15, 15, 18, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid #FFD70030;
+            border-radius: 30px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .tasks-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .tasks-header h3 {
+            color: #FFD700;
+            font-size: 1.5rem;
+        }
+
+        .task-input-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .task-input-group input, .task-input-group select {
+            background: #1A1C24;
+            border: 2px solid #FFD70030;
+            padding: 0.8rem 1.2rem;
+            border-radius: 30px;
+            color: white;
+            min-width: 200px;
+        }
+
+        .task-input-group input:focus, .task-input-group select:focus {
+            outline: none;
+            border-color: #FFD700;
+        }
+
+        .task-item {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            padding: 1.2rem;
+            background: rgba(26, 28, 36, 0.6);
+            border-radius: 20px;
+            margin-bottom: 0.8rem;
+            border: 1px solid #FFD70020;
+        }
+
+        .task-check {
+            width: 28px;
+            height: 28px;
+            border: 2px solid #FFD700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .task-check.completed {
+            background: #FFD700;
+            color: #0A0C14;
+        }
+
+        .task-content {
+            flex: 1;
+        }
+
+        .task-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .task-title.completed {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        .task-meta {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        .task-assignee {
+            color: #FFD700;
+            background: #FFD70020;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+        }
+
+        .task-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .task-actions button {
+            background: transparent;
+            border: none;
+            color: #888;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 1.1rem;
+        }
+
+        .task-actions button:hover {
+            color: #FFD700;
+        }
+
+        /* Meetings Container */
+        .meetings-container {
+            background: rgba(15, 15, 18, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid #FFD70030;
+            border-radius: 30px;
+            padding: 2rem;
+        }
+
+        .meeting-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(26, 28, 36, 0.6);
+            border-radius: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .meeting-link {
+            flex: 1;
+            color: #FFD700;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #FFD700, #B8860B);
+            color: #0A0C14;
+            font-weight: 600;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-gold:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px #FFD700;
+        }
+
+        /* Team Grid */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        .team-member-card {
+            background: rgba(26, 28, 36, 0.6);
+            border: 1px solid #FFD70020;
+            border-radius: 25px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .member-avatar-medium {
+            width: 60px;
+            height: 60px;
+            background: #FFD70020;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFD700;
+            font-size: 2rem;
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #0F0;
+            box-shadow: 0 0 15px #0F0;
+        }
+
+        .status-dot.offline {
+            background: #888;
+            box-shadow: none;
+        }
+
+        /* Pages */
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .sidebar {
+                width: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ========== PAGE ACCUEIL ========== -->
+    <div class="landing-page" id="landingPage">
+        <div class="landing-left">
+            <div class="landing-logo">
+                <span class="web">WEB</span>
+                <span class="nova">NOVA</span>
+            </div>
+            <div class="landing-tagline">
+                Plateforme de gestion d'équipe <span>Premium</span><br>
+                Black & Gold Edition
+            </div>
+            <div class="landing-features">
+                <div class="feature">
+                    <i class="fas fa-tasks"></i>
+                    <span>Tâches</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-video"></i>
+                    <span>Meetings</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-users-cog"></i>
+                    <span>Rôles</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="landing-right">
+            <div class="login-card">
+                <h2>Connexion</h2>
+                
+                <!-- Lien invitation -->
+                <div class="share-link">
+                    <p><i class="fas fa-link"></i> Lien d'équipe</p>
+                    <div class="link-box">
+                        <input type="text" readonly value="https://webnova.team" id="shareLink" onclick="this.select()">
+                        <button onclick="copyLink()"><i class="fas fa-copy"></i></button>
+                    </div>
+                </div>
+
+                <!-- Formulaire (VIDE au départ) -->
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="loginEmail" placeholder="Gmail" value="">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="loginPassword" placeholder="Mot de passe" value="">
+                </div>
+
+                <div class="error-message" id="loginError" style="color: #ff4444; text-align: center; margin: 1rem 0;"></div>
+                <button class="login-btn" onclick="handleLogin()">
+                    Se connecter
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== APPLICATION ========== -->
+    <div class="app" id="app">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fas fa-star"></i>
+                <span>WebNova</span>
+            </div>
+
+            <div class="user-info" id="userInfo">
+                <!-- Rempli par JS -->
+            </div>
+
+            <div class="nav">
+                <div class="nav-item active" data-page="dashboard">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="nav-item" data-page="tasks">
+                    <i class="fas fa-tasks"></i>
+                    <span>Tâches</span>
+                </div>
+                <div class="nav-item" data-page="meetings">
+                    <i class="fas fa-video"></i>
+                    <span>Meetings</span>
+                </div>
+                <div class="nav-item" data-page="team">
+                    <i class="fas fa-users"></i>
+                    <span>Équipe</span>
+                </div>
+            </div>
+
+            <!-- Panel Admin (CEO uniquement) -->
+            <div id="ceoSettings" style="display: none;">
+                <div class="settings-panel">
+                    <h4><i class="fas fa-crown"></i> Administration</h4>
+                    <div id="membersList"></div>
+                    
+                    <div class="add-member">
+                        <input type="email" id="newMemberEmail" placeholder="Gmail">
+                        <input type="text" id="newMemberName" placeholder="Nom">
+                        <select id="newMemberRole">
+                            <option value="Marketing">Marketing</option>
+                            <option value="Développement">Développement</option>
+                            <option value="Design">Design</option>
+                            <option value="Commercial">Commercial</option>
+                            <option value="Support">Support</option>
+                        </select>
+                        <button class="btn-gold-small" onclick="addMember()">+</button>
+                    </div>
+                    <button class="btn-gold-small" onclick="generatePasswords()" style="width:100%; margin-top:1rem;">
+                        Générer MDP
+                    </button>
+                </div>
+            </div>
+
+            <button class="logout-btn" onclick="handleLogout()">
+                <i class="fas fa-power-off"></i> Quitter
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="dashboard-section">
+                <div class="top-bar">
+                    <h1 class="page-title" id="currentPageTitle">Dashboard</h1>
+                </div>
+
+                <!-- Dashboard Page -->
+                <div id="dashboard" class="page active">
+                    <div class="dashboard-grid">
+                        <div class="card">
+                            <i class="fas fa-users" style="color: #FFD700; font-size: 2.5rem;"></i>
+                            <h3>Équipe</h3>
+                            <div class="stat-number" id="statMembers">0</div>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-tasks" style="color: #FFD700; font-size: 2.5rem;"></i>
+                            <h3>Tâches</h3>
+                            <div class="stat-number" id="statTasks">0</div>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-check-circle" style="color: #FFD700; font-size: 2.5rem;"></i>
+                            <h3>Terminées</h3>
+                            <div class="stat-number" id="statCompleted">0</div>
+                        </div>
+                    </div>
+
+                    <!-- Tâches récentes -->
+                    <div class="tasks-container">
+                        <div class="tasks-header">
+                            <h3>Tâches en cours</h3>
+                        </div>
+                        <div id="recentTasksList"></div>
+                    </div>
+
+                    <!-- Meetings rapide -->
+                    <div class="meetings-container">
+                        <h3 style="color: #FFD700; margin-bottom: 1.5rem;">Meetings</h3>
+                        <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                            <button class="btn-gold" onclick="createGoogleMeet()">
+                                <i class="fab fa-google"></i> Générer Meet
+                            </button>
+                            <input type="text" id="meetLink" placeholder="Lien Google Meet..." style="flex:1; background:#1A1C24; border:2px solid #FFD70030; padding:0.8rem 1.2rem; border-radius:30px; color:white;">
+                            <button class="btn-gold" onclick="addMeetingLink()">Ajouter</button>
+                        </div>
+                        <div id="meetingsList"></div>
+                    </div>
+                </div>
+
+                <!-- Tasks Page -->
+                <div id="tasks" class="page">
+                    <h2 class="page-title">Gestion des tâches</h2>
+                    
+                    <!-- Ajout de tâche (CEO uniquement) -->
+                    <div class="tasks-container" id="addTaskSection" style="display: none;">
+                        <div class="tasks-header">
+                            <h3>Nouvelle tâche</h3>
+                        </div>
+                        <div class="task-input-group">
+                            <input type="text" id="taskTitle" placeholder="Titre de la tâche">
+                            <select id="taskAssignee">
+                                <option value="">Choisir un membre</option>
+                            </select>
+                            <select id="taskRole">
+                                <option value="Marketing">Marketing</option>
+                                <option value="Développement">Développement</option>
+                                <option value="Design">Design</option>
+                                <option value="Commercial">Commercial</option>
+                                <option value="Support">Support</option>
+                            </select>
+                            <button class="btn-gold" onclick="addTask()">Créer</button>
+                        </div>
+                    </div>
+
+                    <!-- Liste des tâches -->
+                    <div class="tasks-container">
+                        <div class="tasks-header">
+                            <h3>Toutes les tâches</h3>
+                        </div>
+                        <div id="allTasksList"></div>
+                    </div>
+                </div>
+
+                <!-- Meetings Page -->
+                <div id="meetings" class="page">
+                    <h2 class="page-title">Meetings</h2>
+                    <div class="meetings-container">
+                        <div id="allMeetingsList"></div>
+                    </div>
+                </div>
+
+                <!-- Team Page -->
+                <div id="team" class="page">
+                    <h2 class="page-title">Équipe</h2>
+                    <div class="meetings-container">
+                        <div class="team-grid" id="teamGrid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ========== NOTIFICATION ==========
+        function showNotification(msg, type = 'success') {
+            const notif = document.createElement('div');
+            notif.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: ${type === 'success' ? '#FFD700' : '#ff4444'};
+                color: #0A0C14;
+                padding: 1rem 2rem;
+                border-radius: 50px;
+                font-weight: 600;
+                z-index: 10000;
+                animation: slideIn 0.3s;
+                box-shadow: 0 10px 30px #000;
+            `;
+            notif.textContent = msg;
+            document.body.appendChild(notif);
+            setTimeout(() => notif.remove(), 2000);
+        }
+
+        // ========== SLIDE ANIMATION ==========
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // ========== COPY LINK ==========
+        function copyLink() {
+            const link = document.getElementById('shareLink');
+            link.select();
+            document.execCommand('copy');
+            showNotification('Lien copié!');
+        }
+
+        // ========== DONNÉES ==========
+        let users = JSON.parse(localStorage.getItem('users')) || [
+            { id: 1, email: 'ceo@webnova.com', password: 'admin123', name: 'CEO', avatar: 'C', role: 'CEO', service: 'Direction', status: 'offline' },
+            { id: 2, email: 'sarah@webnova.com', password: 'sarah123', name: 'Sarah', avatar: 'S', role: 'Membre', service: 'Marketing', status: 'offline' },
+            { id: 3, email: 'ahmed@webnova.com', password: 'ahmed123', name: 'Ahmed', avatar: 'A', role: 'Membre', service: 'Développement', status: 'offline' },
+            { id: 4, email: 'leila@webnova.com', password: 'leila123', name: 'Leila', avatar: 'L', role: 'Membre', service: 'Design', status: 'offline' }
+        ];
+
+        let tasks = JSON.parse(localStorage.getItem('tasks')) || [
+            { id: 1, title: 'Préparer campagne marketing', assignedTo: 'Sarah', service: 'Marketing', completed: false, createdBy: 'CEO' },
+            { id: 2, title: 'Développer nouvelle feature', assignedTo: 'Ahmed', service: 'Développement', completed: true, createdBy: 'CEO' },
+            { id: 3, title: 'Créer maquette site', assignedTo: 'Leila', service: 'Design', completed: false, createdBy: 'CEO' }
+        ];
+
+        let meetings = JSON.parse(localStorage.getItem('meetings')) || [
+            { id: 1, link: 'https://meet.google.com/abc-defg-hij', title: 'Daily Meeting', createdBy: 'CEO', time: new Date().toLocaleString() },
+            { id: 2, link: 'https://meet.google.com/xyz-uvwx-yz', title: 'Réunion marketing', createdBy: 'CEO', time: new Date().toLocaleString() }
+        ];
+
+        let currentUser = null;
+
+        // ========== CONNEXION ==========
+        function handleLogin() {
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            const errorDiv = document.getElementById('loginError');
+
+            if (!email || !password) {
+                errorDiv.innerText = 'Veuillez entrer email et mot de passe';
+                return;
+            }
+
+            const user = users.find(u => u.email === email && u.password === password);
+
+            if (user) {
+                currentUser = user;
+                currentUser.status = 'online';
+                saveUsers();
+
+                document.getElementById('landingPage').style.display = 'none';
+                document.getElementById('app').classList.add('active');
+                
+                updateUserInfo();
+                loadAllData();
+                showNotification(`Bienvenue ${user.name}`);
+            } else {
+                errorDiv.innerText = 'Email ou mot de passe incorrect';
+            }
+        }
+
+        function handleLogout() {
+            if (currentUser) {
+                currentUser.status = 'offline';
+                saveUsers();
+            }
+            currentUser = null;
+            document.getElementById('landingPage').style.display = 'flex';
+            document.getElementById('app').classList.remove('active');
+            
+            // Vider les champs
+            document.getElementById('loginEmail').value = '';
+            document.getElementById('loginPassword').value = '';
+            document.getElementById('loginError').innerText = '';
+        }
+
+        function updateUserInfo() {
+            if (currentUser) {
+                document.getElementById('userInfo').innerHTML = `
+                    <div class="user-avatar">${currentUser.avatar}</div>
+                    <div class="user-details">
+                        <h3>${currentUser.name}</h3>
+                        <p>${currentUser.email}</p>
+                        <div class="role-badge">${currentUser.service || 'Direction'}</div>
+                    </div>
+                `;
+
+                // Afficher panel admin si CEO
+                if (currentUser.role === 'CEO') {
+                    document.getElementById('ceoSettings').style.display = 'block';
+                    document.getElementById('addTaskSection').style.display = 'block';
+                    loadMembersList();
+                } else {
+                    document.getElementById('ceoSettings').style.display = 'none';
+                    document.getElementById('addTaskSection').style.display = 'none';
+                }
+            }
+        }
+
+        // ========== GESTION MEMBRES (CEO) ==========
+        function loadMembersList() {
+            const container = document.getElementById('membersList');
+            container.innerHTML = users.filter(u => u.id !== 1).map(u => `
+                <div class="member-row">
+                    <span>${u.avatar}</span>
+                    <input type="text" value="${u.email}" readonly>
+                    <input type="text" value="${u.password}" id="pass-${u.id}">
+                    <input type="text" value="${u.service || ''}" readonly>
+                    <button onclick="copyPassword(${u.id})"><i class="fas fa-copy"></i></button>
+                    <button onclick="deleteMember(${u.id})"><i class="fas fa-trash"></i></button>
+                </div>
+            `).join('');
+        }
+
+        function copyPassword(id) {
+            const pass = document.getElementById(`pass-${id}`);
+            pass.select();
+            document.execCommand('copy');
+            showNotification('Mot de passe copié!');
+        }
+
+        function addMember() {
+            const email = document.getElementById('newMemberEmail').value;
+            const name = document.getElementById('newMemberName').value;
+            const service = document.getElementById('newMemberRole').value;
+            
+            if (!email || !name) {
+                showNotification('Remplis tous les champs', 'error');
+                return;
+            }
+
+            // Vérifier si l'email existe déjà
+            if (users.some(u => u.email === email)) {
+                showNotification('Cet email existe déjà', 'error');
+                return;
+            }
+
+            const password = Math.random().toString(36).slice(-8) + Math.floor(Math.random() * 100);
+            
+            const newUser = {
+                id: Date.now(),
+                email: email,
+                password: password,
+                name: name,
+                avatar: name[0].toUpperCase(),
+                role: 'Membre',
+                service: service,
+                status: 'offline'
+            };
+
+            users.push(newUser);
+            saveUsers();
+
+            showNotification(`Membre ajouté! MDP: ${password}`);
+            document.getElementById('newMemberEmail').value = '';
+            document.getElementById('newMemberName').value = '';
+            loadMembersList();
+            loadAllData();
+        }
+
+        function deleteMember(id) {
+            if (confirm('Supprimer ce membre?')) {
+                users = users.filter(u => u.id !== id);
+                tasks = tasks.filter(t => t.assignedTo !== users.find(u => u.id === id)?.name);
+                saveUsers();
+                saveTasks();
+                loadMembersList();
+                loadAllData();
+                showNotification('Membre supprimé');
+            }
+        }
+
+        function generatePasswords() {
+            users.forEach(user => {
+                if (user.id !== 1) {
+                    user.password = Math.random().toString(36).slice(-8) + Math.floor(Math.random() * 100);
+                }
+            });
+            saveUsers();
+            loadMembersList();
+            showNotification('Nouveaux mots de passe générés!');
+        }
+
+        // ========== GESTION TÂCHES ==========
+        function addTask() {
+            if (currentUser.role !== 'CEO') return;
+            
+            const title = document.getElementById('taskTitle').value;
+            const assignee = document.getElementById('taskAssignee').value;
+            const service = document.getElementById('taskRole').value;
+
+            if (!title || !assignee) {
+                showNotification('Titre et assignation requis', 'error');
+                return;
+            }
+
+            tasks.push({
+                id: Date.now(),
+                title: title,
+                assignedTo: assignee,
+                service: service,
+                completed: false,
+                createdBy: currentUser.name
+            });
+
+            saveTasks();
+            document.getElementById('taskTitle').value = '';
+            loadAllData();
+            showNotification('Tâche créée!');
+        }
+
+        function toggleTask(id) {
+            const task = tasks.find(t => t.id === id);
+            if (task) {
+                // Seul le membre assigné ou le CEO peut compléter
+                if (currentUser.role === 'CEO' || currentUser.name === task.assignedTo) {
+                    task.completed = !task.completed;
+                    saveTasks();
+                    loadAllData();
+                } else {
+                    showNotification('Seul le membre assigné peut modifier', 'error');
+                }
+            }
+        }
+
+        function deleteTask(id) {
+            if (currentUser.role === 'CEO') {
+                if (confirm('Supprimer cette tâche?')) {
+                    tasks = tasks.filter(t => t.id !== id);
+                    saveTasks();
+                    loadAllData();
+                    showNotification('Tâche supprimée');
+                }
+            }
+        }
+
+        // ========== MEETINGS ==========
+        function createGoogleMeet() {
+            const randomId = Math.random().toString(36).substring(2, 10) + '-' + 
+                            Math.random().toString(36).substring(2, 6) + '-' + 
+                            Math.random().toString(36).substring(2, 6);
+            const meetLink = `https://meet.google.com/${randomId}`;
+            document.getElementById('meetLink').value = meetLink;
+        }
+
+        function addMeetingLink() {
+            const link = document.getElementById('meetLink').value;
+            if (link && link.includes('meet.google.com')) {
+                meetings.push({
+                    id: Date.now(),
+                    link: link,
+                    title: 'Meeting ' + new Date().toLocaleDateString(),
+                    createdBy: currentUser.name,
+                    time: new Date().toLocaleString()
+                });
+                saveMeetings();
+                document.getElementById('meetLink').value = '';
+                loadAllData();
+                showNotification('Meeting ajouté!');
+            } else {
+                showNotification('Lien Google Meet valide requis', 'error');
+            }
+        }
+
+        function joinMeeting(link) {
+            window.open(link, '_blank');
+        }
+
+        // ========== SAUVEGARDE ==========
+        function saveUsers() {
+            localStorage.setItem('users', JSON.stringify(users));
+        }
+
+        function saveTasks() {
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+        }
+
+        function saveMeetings() {
+            localStorage.setItem('meetings', JSON.stringify(meetings));
+        }
+
+        // ========== CHARGEMENT DONNÉES ==========
+        function loadAllData() {
+            // Stats
+            document.getElementById('statMembers').innerText = users.length;
+            document.getElementById('statTasks').innerText = tasks.length;
+            document.getElementById('statCompleted').innerText = tasks.filter(t => t.completed).length;
+
+            // Remplir select assignation
+            const assigneeSelect = document.getElementById('taskAssignee');
+            if (assigneeSelect) {
+                assigneeSelect.innerHTML = '<option value="">Choisir</option>' + 
+                    users.filter(u => u.id !== 1).map(u => 
+                        `<option value="${u.name}">${u.name} (${u.service})</option>`
+                    ).join('');
+            }
+
+            // Tâches récentes (dashboard) - limitées à 5
+            const recentTasks = tasks.slice(0, 5);
+            document.getElementById('recentTasksList').innerHTML = recentTasks.length > 0 ? recentTasks.map(t => `
+                <div class="task-item">
+                    <div class="task-check ${t.completed ? 'completed' : ''}" onclick="toggleTask(${t.id})">
+                        ${t.completed ? '<i class="fas fa-check"></i>' : ''}
+                    </div>
+                    <div class="task-content">
+                        <div class="task-title ${t.completed ? 'completed' : ''}">${t.title}</div>
+                        <div class="task-meta">
+                            <span>${t.assignedTo}</span>
+                            <span class="task-assignee">${t.service}</span>
+                        </div>
+                    </div>
+                </div>
+            `).join('') : '<p style="color:#888; text-align:center;">Aucune tâche pour le moment</p>';
+
+            // Toutes les tâches
+            document.getElementById('allTasksList').innerHTML = tasks.length > 0 ? tasks.map(t => `
+                <div class="task-item">
+                    <div class="task-check ${t.completed ? 'completed' : ''}" onclick="toggleTask(${t.id})">
+                        ${t.completed ? '<i class="fas fa-check"></i>' : ''}
+                    </div>
+                    <div class="task-content">
+                        <div class="task-title ${t.completed ? 'completed' : ''}">${t.title}</div>
+                        <div class="task-meta">
+                            <span>Assignée à: <strong>${t.assignedTo}</strong></span>
+                            <span class="task-assignee">${t.service}</span>
+                        </div>
+                    </div>
+                    ${currentUser.role === 'CEO' ? `
+                        <div class="task-actions">
+                            <button onclick="deleteTask(${t.id})"><i class="fas fa-trash"></i></button>
+                        </div>
+                    ` : ''}
+                </div>
+            `).join('') : '<p style="color:#888; text-align:center;">Aucune tâche</p>';
+
+            // Meetings (dashboard)
+            const recentMeetings = meetings.slice(0, 3);
+            document.getElementById('meetingsList').innerHTML = recentMeetings.length > 0 ? recentMeetings.map(m => `
+                <div class="meeting-item">
+                    <i class="fas fa-video" style="color:#FFD700;"></i>
+                    <div style="flex:1;">
+                        <div>${m.title}</div>
+                        <a href="${m.link}" target="_blank" class="meeting-link">${m.link.substring(0,30)}...</a>
+                    </div>
+                    <button class="btn-gold" style="padding:0.5rem 1rem;" onclick="joinMeeting('${m.link}')">
+                        <i class="fas fa-phone"></i>
+                    </button>
+                </div>
+            `).join('') : '<p style="color:#888; text-align:center;">Aucun meeting</p>';
+
+            // Tous les meetings
+            document.getElementById('allMeetingsList').innerHTML = meetings.length > 0 ? meetings.map(m => `
+                <div class="meeting-item">
+                    <i class="fas fa-video" style="color:#FFD700; font-size:1.5rem;"></i>
+                    <div style="flex:1;">
+                        <div style="font-weight:600;">${m.title}</div>
+                        <div style="color:#aaa;">${m.time} · par ${m.createdBy}</div>
+                        <a href="${m.link}" target="_blank" class="meeting-link">${m.link}</a>
+                    </div>
+                    <button class="btn-gold" onclick="joinMeeting('${m.link}')">Rejoindre</button>
+                </div>
+            `).join('') : '<p style="color:#888; text-align:center;">Aucun meeting</p>';
+
+            // Équipe
+            document.getElementById('teamGrid').innerHTML = users.map(u => `
+                <div class="team-member-card">
+                    <div class="member-avatar-medium">${u.avatar}</div>
+                    <div style="flex:1;">
+                        <div style="font-weight:600; font-size:1.2rem;">${u.name}</div>
+                        <div style="color:#aaa;">${u.email}</div>
+                        <div style="margin-top:0.5rem;">
+                            <span style="background:#FFD70020; color:#FFD700; padding:0.2rem 1rem; border-radius:30px; font-size:0.9rem;">
+                                ${u.service || 'Direction'}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="status-dot ${u.status === 'online' ? '' : 'offline'}"></div>
+                </div>
+            `).join('');
+        }
+
+        // ========== NAVIGATION ==========
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', () => {
+                document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+                item.classList.add('active');
+                
+                const page = item.dataset.page;
+                document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+                document.getElementById(page).classList.add('active');
+                
+                const titles = {
+                    dashboard: 'Dashboard',
+                    tasks: 'Tâches',
+                    meetings: 'Meetings',
+                    team: 'Équipe'
+                };
+                document.getElementById('currentPageTitle').innerText = titles[page];
+            });
+        });
+
+        // ========== INIT ==========
+        document.getElementById('shareLink').value = window.location.href;
+    </script>
+</body>
+</html>
