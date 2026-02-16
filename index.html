@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebNova · Plateforme Équipe</title>
-    <!-- Font Awesome -->
+    <title>WebNova PRO · Plateforme Équipe</title>
+    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
             min-height: 100vh;
         }
 
-        /* ========== PAGE ACCUEIL LUXE ========== */
+        /* ========== PAGE ACCUEIL PRO ========== */
         .landing-page {
             display: flex;
             min-height: 100vh;
@@ -128,7 +128,6 @@
             font-size: 1.1rem;
         }
 
-        /* Right side Login */
         .landing-right {
             width: 500px;
             background: rgba(15, 15, 18, 0.8);
@@ -252,7 +251,7 @@
             box-shadow: 0 0 50px #FFD700;
         }
 
-        /* ========== APPLICATION ========== */
+        /* ========== APPLICATION PRO ========== */
         .app {
             display: none;
             height: 100vh;
@@ -265,13 +264,13 @@
 
         /* Sidebar */
         .sidebar {
-            width: 320px;
+            width: 280px;
             background: rgba(10, 12, 20, 0.95);
             backdrop-filter: blur(20px);
             border-right: 2px solid #FFD70030;
             display: flex;
             flex-direction: column;
-            padding: 2.5rem 1.8rem;
+            padding: 2rem 1.5rem;
             overflow-y: auto;
         }
 
@@ -279,31 +278,31 @@
             display: flex;
             align-items: center;
             gap: 1rem;
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 800;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
         }
 
         .logo i {
             color: #FFD700;
             filter: drop-shadow(0 0 20px #FFD700);
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
 
         .user-info {
             background: rgba(255, 215, 0, 0.08);
             border: 1px solid #FFD70030;
-            border-radius: 30px;
-            padding: 1.8rem;
+            border-radius: 20px;
+            padding: 1.5rem;
             margin-bottom: 2rem;
             display: flex;
             align-items: center;
-            gap: 1.2rem;
+            gap: 1rem;
         }
 
         .user-avatar {
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
             background: linear-gradient(135deg, #FFD700, #FF8C00);
             border-radius: 50%;
             display: flex;
@@ -311,29 +310,29 @@
             justify-content: center;
             color: #0A0C14;
             font-weight: 700;
-            font-size: 2.2rem;
-            box-shadow: 0 0 30px #FFD700;
+            font-size: 2rem;
+            box-shadow: 0 0 20px #FFD700;
         }
 
         .user-details h3 {
             color: #FFD700;
-            font-size: 1.3rem;
-            margin-bottom: 0.3rem;
+            font-size: 1.2rem;
+            margin-bottom: 0.2rem;
         }
 
         .user-details p {
             color: #aaa;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
         }
 
         .role-badge {
             display: inline-block;
             background: #FFD70020;
             color: #FFD700;
-            padding: 0.3rem 1rem;
+            padding: 0.2rem 0.8rem;
             border-radius: 30px;
-            font-size: 0.8rem;
-            margin-top: 0.5rem;
+            font-size: 0.75rem;
+            margin-top: 0.3rem;
         }
 
         .nav {
@@ -346,18 +345,18 @@
         .nav-item {
             display: flex;
             align-items: center;
-            gap: 1.2rem;
-            padding: 1.2rem 1.5rem;
-            border-radius: 20px;
+            gap: 1rem;
+            padding: 1rem 1.2rem;
+            border-radius: 16px;
             color: #aaa;
             cursor: pointer;
             transition: 0.3s;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         .nav-item i {
-            width: 28px;
-            font-size: 1.3rem;
+            width: 24px;
+            font-size: 1.2rem;
         }
 
         .nav-item:hover {
@@ -369,120 +368,18 @@
         .nav-item.active {
             background: #FFD70020;
             color: #FFD700;
-            border-left: 5px solid #FFD700;
-        }
-
-        /* Settings Panel Admin */
-        .settings-panel {
-            background: rgba(255, 215, 0, 0.05);
-            border: 1px solid #FFD70030;
-            border-radius: 25px;
-            padding: 1.8rem;
-            margin: 1.5rem 0;
-        }
-
-        .settings-panel h4 {
-            color: #FFD700;
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-        .member-row {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            padding: 1rem;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 15px;
-            margin-bottom: 0.8rem;
-        }
-
-        .member-row span {
-            color: #FFD700;
-            font-weight: 600;
-            min-width: 30px;
-        }
-
-        .member-row input {
-            flex: 1;
-            background: #1A1C24;
-            border: 1px solid #FFD70030;
-            padding: 0.7rem;
-            border-radius: 12px;
-            color: white;
-        }
-
-        .member-row select {
-            background: #1A1C24;
-            border: 1px solid #FFD70030;
-            padding: 0.7rem;
-            border-radius: 12px;
-            color: #FFD700;
-            cursor: pointer;
-        }
-
-        .member-row button {
-            background: #FFD70020;
-            border: none;
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            color: #FFD700;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .member-row button:hover {
-            background: #FFD700;
-            color: #0A0C14;
-        }
-
-        .add-member {
-            display: flex;
-            gap: 0.8rem;
-            margin-top: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .add-member input, .add-member select {
-            flex: 1;
-            background: #1A1C24;
-            border: 1px solid #FFD70030;
-            padding: 1rem;
-            border-radius: 15px;
-            color: white;
-            min-width: 120px;
-        }
-
-        .btn-gold-small {
-            background: #FFD700;
-            color: #0A0C14;
-            border: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        .btn-gold-small:hover {
-            transform: scale(1.02);
-            box-shadow: 0 0 20px #FFD700;
+            border-left: 4px solid #FFD700;
         }
 
         .logout-btn {
             background: transparent;
             border: 2px solid #FFD700;
             color: #FFD700;
-            padding: 1rem;
-            border-radius: 40px;
+            padding: 0.8rem;
+            border-radius: 30px;
             cursor: pointer;
             width: 100%;
             margin-top: 1rem;
-            font-size: 1rem;
             transition: 0.3s;
         }
 
@@ -511,7 +408,7 @@
         }
 
         .page-title {
-            font-size: 2.2rem;
+            font-size: 2rem;
             font-weight: 700;
             background: linear-gradient(135deg, #FFD700, #FFB347);
             background-clip: text;
@@ -519,47 +416,209 @@
             color: transparent;
         }
 
-        /* Stats Cards */
+        /* Stats Cards PRO */
         .dashboard-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.8rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
             margin-bottom: 2rem;
         }
 
         .card {
-            background: rgba(15, 15, 18, 0.7);
-            backdrop-filter: blur(10px);
+            background: rgba(15, 15, 18, 0.8);
             border: 1px solid #FFD70030;
-            border-radius: 30px;
-            padding: 2.2rem;
+            border-radius: 24px;
+            padding: 2rem;
             transition: 0.3s;
+            text-align: center;
         }
 
         .card:hover {
             border-color: #FFD700;
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px #00000080;
+            box-shadow: 0 10px 30px #00000080;
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            color: #FFD700;
+            margin-bottom: 1rem;
         }
 
         .card h3 {
             color: #FFD700;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
         }
 
         .stat-number {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 700;
             color: #FFD700;
             line-height: 1;
         }
 
+        /* Section Ajout Membre - GRANDE */
+        .add-member-section {
+            background: rgba(15, 15, 18, 0.8);
+            border: 1px solid #FFD70040;
+            border-radius: 30px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px #000000;
+        }
+
+        .add-member-section h2 {
+            color: #FFD700;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .add-member-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            align-items: end;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            color: #FFD700;
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-group input, .form-group select {
+            background: #1A1C24;
+            border: 2px solid #FFD70030;
+            padding: 1rem 1.2rem;
+            border-radius: 16px;
+            color: white;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: #FFD700;
+            box-shadow: 0 0 20px #FFD70030;
+        }
+
+        .btn-add-member {
+            background: linear-gradient(135deg, #FFD700, #B8860B);
+            color: #0A0C14;
+            font-weight: 700;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 16px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.3s;
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .btn-add-member:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 30px #FFD700;
+        }
+
+        /* Liste membres */
+        .members-list-section {
+            background: rgba(15, 15, 18, 0.8);
+            border: 1px solid #FFD70040;
+            border-radius: 30px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .members-list-section h3 {
+            color: #FFD700;
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .member-card {
+            background: rgba(26, 28, 36, 0.7);
+            border: 1px solid #FFD70020;
+            border-radius: 20px;
+            padding: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .member-avatar {
+            width: 50px;
+            height: 50px;
+            background: #FFD70020;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFD700;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .member-info {
+            flex: 1;
+        }
+
+        .member-info h4 {
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .member-info p {
+            color: #aaa;
+            font-size: 0.8rem;
+        }
+
+        .member-role {
+            background: #FFD70020;
+            color: #FFD700;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.75rem;
+        }
+
+        .member-status {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #0F0;
+            box-shadow: 0 0 10px #0F0;
+        }
+
+        .member-status.offline {
+            background: #888;
+            box-shadow: none;
+        }
+
         /* Tasks Section */
-        .tasks-container {
-            background: rgba(15, 15, 18, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid #FFD70030;
+        .tasks-section {
+            background: rgba(15, 15, 18, 0.8);
+            border: 1px solid #FFD70040;
             border-radius: 30px;
             padding: 2rem;
             margin-bottom: 2rem;
@@ -576,51 +635,43 @@
 
         .tasks-header h3 {
             color: #FFD700;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
         }
 
         .task-input-group {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
-            align-items: center;
         }
 
         .task-input-group input, .task-input-group select {
             background: #1A1C24;
             border: 2px solid #FFD70030;
             padding: 0.8rem 1.2rem;
-            border-radius: 30px;
+            border-radius: 16px;
             color: white;
             min-width: 200px;
-        }
-
-        .task-input-group input:focus, .task-input-group select:focus {
-            outline: none;
-            border-color: #FFD700;
         }
 
         .task-item {
             display: flex;
             align-items: center;
-            gap: 1.2rem;
-            padding: 1.2rem;
+            gap: 1rem;
+            padding: 1rem;
             background: rgba(26, 28, 36, 0.6);
-            border-radius: 20px;
+            border-radius: 16px;
             margin-bottom: 0.8rem;
-            border: 1px solid #FFD70020;
         }
 
         .task-check {
-            width: 28px;
-            height: 28px;
+            width: 24px;
+            height: 24px;
             border: 2px solid #FFD700;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            transition: 0.3s;
         }
 
         .task-check.completed {
@@ -634,8 +685,7 @@
 
         .task-title {
             font-weight: 600;
-            font-size: 1.1rem;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.2rem;
         }
 
         .task-title.completed {
@@ -645,21 +695,16 @@
 
         .task-meta {
             display: flex;
-            gap: 1.5rem;
-            font-size: 0.9rem;
+            gap: 1rem;
+            font-size: 0.8rem;
             color: #aaa;
         }
 
         .task-assignee {
             color: #FFD700;
             background: #FFD70020;
-            padding: 0.2rem 1rem;
+            padding: 0.2rem 0.8rem;
             border-radius: 30px;
-        }
-
-        .task-actions {
-            display: flex;
-            gap: 0.5rem;
         }
 
         .task-actions button {
@@ -667,19 +712,17 @@
             border: none;
             color: #888;
             cursor: pointer;
-            transition: 0.3s;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         .task-actions button:hover {
             color: #FFD700;
         }
 
-        /* Meetings Container */
-        .meetings-container {
-            background: rgba(15, 15, 18, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid #FFD70030;
+        /* Meetings Section */
+        .meetings-section {
+            background: rgba(15, 15, 18, 0.8);
+            border: 1px solid #FFD70040;
             border-radius: 30px;
             padding: 2rem;
         }
@@ -690,15 +733,15 @@
             gap: 1rem;
             padding: 1rem;
             background: rgba(26, 28, 36, 0.6);
-            border-radius: 20px;
-            margin-bottom: 1rem;
+            border-radius: 16px;
+            margin-bottom: 0.8rem;
         }
 
         .meeting-link {
             flex: 1;
             color: #FFD700;
             text-decoration: none;
-            word-break: break-all;
+            font-size: 0.9rem;
         }
 
         .btn-gold {
@@ -709,7 +752,6 @@
             border: none;
             border-radius: 30px;
             cursor: pointer;
-            transition: 0.3s;
         }
 
         .btn-gold:hover {
@@ -717,47 +759,9 @@
             box-shadow: 0 0 20px #FFD700;
         }
 
-        /* Team Grid */
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.2rem;
-            margin-top: 1rem;
-        }
-
-        .team-member-card {
-            background: rgba(26, 28, 36, 0.6);
-            border: 1px solid #FFD70020;
-            border-radius: 25px;
-            padding: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .member-avatar-medium {
-            width: 60px;
-            height: 60px;
-            background: #FFD70020;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #FFD700;
-            font-size: 2rem;
-        }
-
-        .status-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #0F0;
-            box-shadow: 0 0 15px #0F0;
-        }
-
-        .status-dot.offline {
-            background: #888;
-            box-shadow: none;
+        .btn-small {
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
         }
 
         /* Pages */
@@ -770,9 +774,19 @@
         }
 
         /* Responsive */
-        @media (max-width: 1200px) {
-            .sidebar {
-                width: 280px;
+        @media (max-width: 1000px) {
+            .dashboard-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 700px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .add-member-form {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -786,13 +800,13 @@
                 <span class="nova">NOVA</span>
             </div>
             <div class="landing-tagline">
-                Plateforme de gestion d'équipe <span>Premium</span><br>
+                Plateforme de gestion d'équipe <span>PRO</span><br>
                 Black & Gold Edition
             </div>
             <div class="landing-features">
                 <div class="feature">
                     <i class="fas fa-tasks"></i>
-                    <span>Tâches</span>
+                    <span>Tâches PRO</span>
                 </div>
                 <div class="feature">
                     <i class="fas fa-video"></i>
@@ -800,25 +814,23 @@
                 </div>
                 <div class="feature">
                     <i class="fas fa-users-cog"></i>
-                    <span>Rôles</span>
+                    <span>Équipe</span>
                 </div>
             </div>
         </div>
 
         <div class="landing-right">
             <div class="login-card">
-                <h2>Connexion</h2>
+                <h2>Connexion PRO</h2>
                 
-                <!-- Lien invitation -->
                 <div class="share-link">
                     <p><i class="fas fa-link"></i> Lien d'équipe</p>
                     <div class="link-box">
-                        <input type="text" readonly value="https://webnova.team" id="shareLink" onclick="this.select()">
+                        <input type="text" readonly value="https://webnova.pro" id="shareLink" onclick="this.select()">
                         <button onclick="copyLink()"><i class="fas fa-copy"></i></button>
                     </div>
                 </div>
 
-                <!-- Formulaire (VIDE au départ) -->
                 <div class="input-group">
                     <i class="fas fa-envelope"></i>
                     <input type="email" id="loginEmail" placeholder="Gmail" value="">
@@ -836,13 +848,12 @@
         </div>
     </div>
 
-    <!-- ========== APPLICATION ========== -->
+    <!-- ========== APPLICATION PRO ========== -->
     <div class="app" id="app">
-        <!-- Sidebar -->
         <div class="sidebar">
             <div class="logo">
                 <i class="fas fa-star"></i>
-                <span>WebNova</span>
+                <span>WebNova PRO</span>
             </div>
 
             <div class="user-info" id="userInfo">
@@ -862,34 +873,6 @@
                     <i class="fas fa-video"></i>
                     <span>Meetings</span>
                 </div>
-                <div class="nav-item" data-page="team">
-                    <i class="fas fa-users"></i>
-                    <span>Équipe</span>
-                </div>
-            </div>
-
-            <!-- Panel Admin (CEO uniquement) -->
-            <div id="ceoSettings" style="display: none;">
-                <div class="settings-panel">
-                    <h4><i class="fas fa-crown"></i> Administration</h4>
-                    <div id="membersList"></div>
-                    
-                    <div class="add-member">
-                        <input type="email" id="newMemberEmail" placeholder="Gmail">
-                        <input type="text" id="newMemberName" placeholder="Nom">
-                        <select id="newMemberRole">
-                            <option value="Marketing">Marketing</option>
-                            <option value="Développement">Développement</option>
-                            <option value="Design">Design</option>
-                            <option value="Commercial">Commercial</option>
-                            <option value="Support">Support</option>
-                        </select>
-                        <button class="btn-gold-small" onclick="addMember()">+</button>
-                    </div>
-                    <button class="btn-gold-small" onclick="generatePasswords()" style="width:100%; margin-top:1rem;">
-                        Générer MDP
-                    </button>
-                </div>
             </div>
 
             <button class="logout-btn" onclick="handleLogout()">
@@ -897,50 +880,89 @@
             </button>
         </div>
 
-        <!-- Main Content -->
         <div class="main-content">
             <div class="dashboard-section">
                 <div class="top-bar">
-                    <h1 class="page-title" id="currentPageTitle">Dashboard</h1>
+                    <h1 class="page-title" id="currentPageTitle">Dashboard PRO</h1>
                 </div>
 
                 <!-- Dashboard Page -->
                 <div id="dashboard" class="page active">
+                    <!-- Stats Cards -->
                     <div class="dashboard-grid">
                         <div class="card">
-                            <i class="fas fa-users" style="color: #FFD700; font-size: 2.5rem;"></i>
+                            <i class="fas fa-users"></i>
                             <h3>Équipe</h3>
                             <div class="stat-number" id="statMembers">0</div>
                         </div>
                         <div class="card">
-                            <i class="fas fa-tasks" style="color: #FFD700; font-size: 2.5rem;"></i>
+                            <i class="fas fa-tasks"></i>
                             <h3>Tâches</h3>
                             <div class="stat-number" id="statTasks">0</div>
                         </div>
                         <div class="card">
-                            <i class="fas fa-check-circle" style="color: #FFD700; font-size: 2.5rem;"></i>
+                            <i class="fas fa-check-circle"></i>
                             <h3>Terminées</h3>
                             <div class="stat-number" id="statCompleted">0</div>
                         </div>
                     </div>
 
+                    <!-- Section Ajout Membre - GRANDE (visible pour CEO) -->
+                    <div class="add-member-section" id="addMemberSection" style="display: none;">
+                        <h2><i class="fas fa-user-plus"></i> Ajouter un membre à l'équipe</h2>
+                        <div class="add-member-form">
+                            <div class="form-group">
+                                <label>Gmail</label>
+                                <input type="email" id="newMemberEmail" placeholder="exemple@gmail.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Nom complet</label>
+                                <input type="text" id="newMemberName" placeholder="Nom prénom">
+                            </div>
+                            <div class="form-group">
+                                <label>Rôle / Service</label>
+                                <select id="newMemberRole">
+                                    <option value="Marketing">Marketing</option>
+                                    <option value="Développement">Développement</option>
+                                    <option value="Design">Design</option>
+                                    <option value="Commercial">Commercial</option>
+                                    <option value="Support">Support</option>
+                                    <option value="Direction">Direction</option>
+                                </select>
+                            </div>
+                            <button class="btn-add-member" onclick="addMember()">
+                                <i class="fas fa-plus-circle"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Liste des membres (visible pour tous) -->
+                    <div class="members-list-section">
+                        <h3><i class="fas fa-users"></i> Équipe</h3>
+                        <div class="members-grid" id="teamGrid">
+                            <!-- Rempli par JS -->
+                        </div>
+                    </div>
+
                     <!-- Tâches récentes -->
-                    <div class="tasks-container">
+                    <div class="tasks-section">
                         <div class="tasks-header">
-                            <h3>Tâches en cours</h3>
+                            <h3><i class="fas fa-tasks"></i> Tâches en cours</h3>
                         </div>
                         <div id="recentTasksList"></div>
                     </div>
 
-                    <!-- Meetings rapide -->
-                    <div class="meetings-container">
-                        <h3 style="color: #FFD700; margin-bottom: 1.5rem;">Meetings</h3>
-                        <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                    <!-- Meetings -->
+                    <div class="meetings-section">
+                        <h3 style="color: #FFD700; margin-bottom: 1.5rem;"><i class="fas fa-video"></i> Meetings</h3>
+                        <div style="display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
                             <button class="btn-gold" onclick="createGoogleMeet()">
                                 <i class="fab fa-google"></i> Générer Meet
                             </button>
-                            <input type="text" id="meetLink" placeholder="Lien Google Meet..." style="flex:1; background:#1A1C24; border:2px solid #FFD70030; padding:0.8rem 1.2rem; border-radius:30px; color:white;">
-                            <button class="btn-gold" onclick="addMeetingLink()">Ajouter</button>
+                            <div style="flex: 1; display: flex; gap: 0.5rem; min-width: 300px;">
+                                <input type="text" id="meetLink" placeholder="Lien Google Meet..." style="flex:1; background:#1A1C24; border:2px solid #FFD70030; padding:0.8rem 1.2rem; border-radius:16px; color:white;">
+                                <button class="btn-gold btn-small" onclick="addMeetingLink()">Ajouter</button>
+                            </div>
                         </div>
                         <div id="meetingsList"></div>
                     </div>
@@ -950,8 +972,7 @@
                 <div id="tasks" class="page">
                     <h2 class="page-title">Gestion des tâches</h2>
                     
-                    <!-- Ajout de tâche (CEO uniquement) -->
-                    <div class="tasks-container" id="addTaskSection" style="display: none;">
+                    <div class="tasks-section" id="addTaskSection" style="display: none;">
                         <div class="tasks-header">
                             <h3>Nouvelle tâche</h3>
                         </div>
@@ -971,8 +992,7 @@
                         </div>
                     </div>
 
-                    <!-- Liste des tâches -->
-                    <div class="tasks-container">
+                    <div class="tasks-section">
                         <div class="tasks-header">
                             <h3>Toutes les tâches</h3>
                         </div>
@@ -982,17 +1002,9 @@
 
                 <!-- Meetings Page -->
                 <div id="meetings" class="page">
-                    <h2 class="page-title">Meetings</h2>
-                    <div class="meetings-container">
+                    <h2 class="page-title">Tous les meetings</h2>
+                    <div class="meetings-section">
                         <div id="allMeetingsList"></div>
-                    </div>
-                </div>
-
-                <!-- Team Page -->
-                <div id="team" class="page">
-                    <h2 class="page-title">Équipe</h2>
-                    <div class="meetings-container">
-                        <div class="team-grid" id="teamGrid"></div>
                     </div>
                 </div>
             </div>
@@ -1021,7 +1033,6 @@
             setTimeout(() => notif.remove(), 2000);
         }
 
-        // ========== SLIDE ANIMATION ==========
         const style = document.createElement('style');
         style.textContent = `
             @keyframes slideIn {
@@ -1031,7 +1042,6 @@
         `;
         document.head.appendChild(style);
 
-        // ========== COPY LINK ==========
         function copyLink() {
             const link = document.getElementById('shareLink');
             link.select();
@@ -1054,8 +1064,7 @@
         ];
 
         let meetings = JSON.parse(localStorage.getItem('meetings')) || [
-            { id: 1, link: 'https://meet.google.com/abc-defg-hij', title: 'Daily Meeting', createdBy: 'CEO', time: new Date().toLocaleString() },
-            { id: 2, link: 'https://meet.google.com/xyz-uvwx-yz', title: 'Réunion marketing', createdBy: 'CEO', time: new Date().toLocaleString() }
+            { id: 1, link: 'https://meet.google.com/abc-defg-hij', title: 'Daily Meeting', createdBy: 'CEO', time: new Date().toLocaleString() }
         ];
 
         let currentUser = null;
@@ -1098,7 +1107,6 @@
             document.getElementById('landingPage').style.display = 'flex';
             document.getElementById('app').classList.remove('active');
             
-            // Vider les champs
             document.getElementById('loginEmail').value = '';
             document.getElementById('loginPassword').value = '';
             document.getElementById('loginError').innerText = '';
@@ -1115,41 +1123,20 @@
                     </div>
                 `;
 
-                // Afficher panel admin si CEO
                 if (currentUser.role === 'CEO') {
-                    document.getElementById('ceoSettings').style.display = 'block';
+                    document.getElementById('addMemberSection').style.display = 'block';
                     document.getElementById('addTaskSection').style.display = 'block';
-                    loadMembersList();
                 } else {
-                    document.getElementById('ceoSettings').style.display = 'none';
+                    document.getElementById('addMemberSection').style.display = 'none';
                     document.getElementById('addTaskSection').style.display = 'none';
                 }
             }
         }
 
-        // ========== GESTION MEMBRES (CEO) ==========
-        function loadMembersList() {
-            const container = document.getElementById('membersList');
-            container.innerHTML = users.filter(u => u.id !== 1).map(u => `
-                <div class="member-row">
-                    <span>${u.avatar}</span>
-                    <input type="text" value="${u.email}" readonly>
-                    <input type="text" value="${u.password}" id="pass-${u.id}">
-                    <input type="text" value="${u.service || ''}" readonly>
-                    <button onclick="copyPassword(${u.id})"><i class="fas fa-copy"></i></button>
-                    <button onclick="deleteMember(${u.id})"><i class="fas fa-trash"></i></button>
-                </div>
-            `).join('');
-        }
-
-        function copyPassword(id) {
-            const pass = document.getElementById(`pass-${id}`);
-            pass.select();
-            document.execCommand('copy');
-            showNotification('Mot de passe copié!');
-        }
-
+        // ========== GESTION MEMBRES ==========
         function addMember() {
+            if (currentUser.role !== 'CEO') return;
+            
             const email = document.getElementById('newMemberEmail').value;
             const name = document.getElementById('newMemberName').value;
             const service = document.getElementById('newMemberRole').value;
@@ -1159,7 +1146,6 @@
                 return;
             }
 
-            // Vérifier si l'email existe déjà
             if (users.some(u => u.email === email)) {
                 showNotification('Cet email existe déjà', 'error');
                 return;
@@ -1184,34 +1170,10 @@
             showNotification(`Membre ajouté! MDP: ${password}`);
             document.getElementById('newMemberEmail').value = '';
             document.getElementById('newMemberName').value = '';
-            loadMembersList();
             loadAllData();
         }
 
-        function deleteMember(id) {
-            if (confirm('Supprimer ce membre?')) {
-                users = users.filter(u => u.id !== id);
-                tasks = tasks.filter(t => t.assignedTo !== users.find(u => u.id === id)?.name);
-                saveUsers();
-                saveTasks();
-                loadMembersList();
-                loadAllData();
-                showNotification('Membre supprimé');
-            }
-        }
-
-        function generatePasswords() {
-            users.forEach(user => {
-                if (user.id !== 1) {
-                    user.password = Math.random().toString(36).slice(-8) + Math.floor(Math.random() * 100);
-                }
-            });
-            saveUsers();
-            loadMembersList();
-            showNotification('Nouveaux mots de passe générés!');
-        }
-
-        // ========== GESTION TÂCHES ==========
+        // ========== TÂCHES ==========
         function addTask() {
             if (currentUser.role !== 'CEO') return;
             
@@ -1242,7 +1204,6 @@
         function toggleTask(id) {
             const task = tasks.find(t => t.id === id);
             if (task) {
-                // Seul le membre assigné ou le CEO peut compléter
                 if (currentUser.role === 'CEO' || currentUser.name === task.assignedTo) {
                     task.completed = !task.completed;
                     saveTasks();
@@ -1309,14 +1270,12 @@
             localStorage.setItem('meetings', JSON.stringify(meetings));
         }
 
-        // ========== CHARGEMENT DONNÉES ==========
+        // ========== CHARGEMENT ==========
         function loadAllData() {
-            // Stats
             document.getElementById('statMembers').innerText = users.length;
             document.getElementById('statTasks').innerText = tasks.length;
             document.getElementById('statCompleted').innerText = tasks.filter(t => t.completed).length;
 
-            // Remplir select assignation
             const assigneeSelect = document.getElementById('taskAssignee');
             if (assigneeSelect) {
                 assigneeSelect.innerHTML = '<option value="">Choisir</option>' + 
@@ -1325,9 +1284,21 @@
                     ).join('');
             }
 
-            // Tâches récentes (dashboard) - limitées à 5
-            const recentTasks = tasks.slice(0, 5);
-            document.getElementById('recentTasksList').innerHTML = recentTasks.length > 0 ? recentTasks.map(t => `
+            // Équipe
+            document.getElementById('teamGrid').innerHTML = users.map(u => `
+                <div class="member-card">
+                    <div class="member-avatar">${u.avatar}</div>
+                    <div class="member-info">
+                        <h4>${u.name}</h4>
+                        <p>${u.email}</p>
+                        <span class="member-role">${u.service || 'Direction'}</span>
+                    </div>
+                    <div class="member-status ${u.status === 'online' ? '' : 'offline'}"></div>
+                </div>
+            `).join('');
+
+            // Tâches récentes
+            document.getElementById('recentTasksList').innerHTML = tasks.slice(0, 5).map(t => `
                 <div class="task-item">
                     <div class="task-check ${t.completed ? 'completed' : ''}" onclick="toggleTask(${t.id})">
                         ${t.completed ? '<i class="fas fa-check"></i>' : ''}
@@ -1340,10 +1311,10 @@
                         </div>
                     </div>
                 </div>
-            `).join('') : '<p style="color:#888; text-align:center;">Aucune tâche pour le moment</p>';
+            `).join('') || '<p style="color:#888;">Aucune tâche</p>';
 
             // Toutes les tâches
-            document.getElementById('allTasksList').innerHTML = tasks.length > 0 ? tasks.map(t => `
+            document.getElementById('allTasksList').innerHTML = tasks.map(t => `
                 <div class="task-item">
                     <div class="task-check ${t.completed ? 'completed' : ''}" onclick="toggleTask(${t.id})">
                         ${t.completed ? '<i class="fas fa-check"></i>' : ''}
@@ -1361,52 +1332,33 @@
                         </div>
                     ` : ''}
                 </div>
-            `).join('') : '<p style="color:#888; text-align:center;">Aucune tâche</p>';
+            `).join('') || '<p style="color:#888;">Aucune tâche</p>';
 
-            // Meetings (dashboard)
-            const recentMeetings = meetings.slice(0, 3);
-            document.getElementById('meetingsList').innerHTML = recentMeetings.length > 0 ? recentMeetings.map(m => `
+            // Meetings
+            document.getElementById('meetingsList').innerHTML = meetings.slice(0, 3).map(m => `
                 <div class="meeting-item">
                     <i class="fas fa-video" style="color:#FFD700;"></i>
                     <div style="flex:1;">
                         <div>${m.title}</div>
                         <a href="${m.link}" target="_blank" class="meeting-link">${m.link.substring(0,30)}...</a>
                     </div>
-                    <button class="btn-gold" style="padding:0.5rem 1rem;" onclick="joinMeeting('${m.link}')">
+                    <button class="btn-gold btn-small" onclick="joinMeeting('${m.link}')">
                         <i class="fas fa-phone"></i>
                     </button>
                 </div>
-            `).join('') : '<p style="color:#888; text-align:center;">Aucun meeting</p>';
+            `).join('') || '<p style="color:#888;">Aucun meeting</p>';
 
-            // Tous les meetings
-            document.getElementById('allMeetingsList').innerHTML = meetings.length > 0 ? meetings.map(m => `
+            document.getElementById('allMeetingsList').innerHTML = meetings.map(m => `
                 <div class="meeting-item">
-                    <i class="fas fa-video" style="color:#FFD700; font-size:1.5rem;"></i>
+                    <i class="fas fa-video" style="color:#FFD700;"></i>
                     <div style="flex:1;">
                         <div style="font-weight:600;">${m.title}</div>
                         <div style="color:#aaa;">${m.time} · par ${m.createdBy}</div>
                         <a href="${m.link}" target="_blank" class="meeting-link">${m.link}</a>
                     </div>
-                    <button class="btn-gold" onclick="joinMeeting('${m.link}')">Rejoindre</button>
+                    <button class="btn-gold btn-small" onclick="joinMeeting('${m.link}')">Rejoindre</button>
                 </div>
-            `).join('') : '<p style="color:#888; text-align:center;">Aucun meeting</p>';
-
-            // Équipe
-            document.getElementById('teamGrid').innerHTML = users.map(u => `
-                <div class="team-member-card">
-                    <div class="member-avatar-medium">${u.avatar}</div>
-                    <div style="flex:1;">
-                        <div style="font-weight:600; font-size:1.2rem;">${u.name}</div>
-                        <div style="color:#aaa;">${u.email}</div>
-                        <div style="margin-top:0.5rem;">
-                            <span style="background:#FFD70020; color:#FFD700; padding:0.2rem 1rem; border-radius:30px; font-size:0.9rem;">
-                                ${u.service || 'Direction'}
-                            </span>
-                        </div>
-                    </div>
-                    <div class="status-dot ${u.status === 'online' ? '' : 'offline'}"></div>
-                </div>
-            `).join('');
+            `).join('') || '<p style="color:#888;">Aucun meeting</p>';
         }
 
         // ========== NAVIGATION ==========
@@ -1420,16 +1372,14 @@
                 document.getElementById(page).classList.add('active');
                 
                 const titles = {
-                    dashboard: 'Dashboard',
+                    dashboard: 'Dashboard PRO',
                     tasks: 'Tâches',
-                    meetings: 'Meetings',
-                    team: 'Équipe'
+                    meetings: 'Meetings'
                 };
                 document.getElementById('currentPageTitle').innerText = titles[page];
             });
         });
 
-        // ========== INIT ==========
         document.getElementById('shareLink').value = window.location.href;
     </script>
 </body>
